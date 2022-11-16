@@ -16,7 +16,24 @@ Why are tests failing?
 - Need to create a method to calculate a gpa from given test results
 ```
 
-## Andy Croll's instructions...
+``` 
+STEP THREE - I changed code initially in 'gpa' & 'announcement' methods to get
+at least two expected test results turning 'green' and see where code needs to be altered.
+Hard coding '4' and "Andy scored an average of 4.0" expectation from test array/out: hash
+returns 2 green ticks in first test expectations for 'Andy'. 
+```
+---------- Andy ---------- \
+✅ GPA: 4 \
+✅ ANNOUNCEMENT: Andy scored an average of 4.0
+
+### But rest of output of course returning failing tests i.e...
+
+---------- Beryl ---------- \
+❌ GPA: expected '3' but got '4' \
+❌ ANNOUNCEMENT: expected 'Beryl scored an average of 3.0' but got 'Andy scored an average of 4.0'
+
+
+## Instructions...
 
 
 Hi there,
