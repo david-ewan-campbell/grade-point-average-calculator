@@ -12,7 +12,7 @@ STEP TWO - See failing output by running...
 
 Why are tests failing? 
 - Just hard-coded 0 in gpa method & '' in announcement method
-- No method there to iterate through and calculate required gpa
+- No methods to iterate through and calculate required gpa
 - Need to create a method to calculate a gpa from given test results
 ```
 
@@ -22,6 +22,7 @@ at least two expected test results turning 'green' and see where code needs to b
 Hard coding '4' and "Andy scored an average of 4.0" expectation from test array/out: hash
 returns 2 green ticks in first test expectations for 'Andy'. 
 ```
+
 ---------- Andy ---------- \
 ✅ GPA: 4 \
 ✅ ANNOUNCEMENT: Andy scored an average of 4.0
@@ -32,6 +33,22 @@ returns 2 green ticks in first test expectations for 'Andy'.
 ❌ GPA: expected '3' but got '4' \
 ❌ ANNOUNCEMENT: expected 'Beryl scored an average of 3.0' but got 'Andy scored an average of 4.0'
 
+```
+STEP FOUR - Added a gpa_converter method & created a 1st hash pair from the given gpa scores list
+of the 1st test expectation of the Andy's top score of 'A' => 4
+added a method to iterate through grades and convert them to the equivalent score(a float) so they can be passed to the gpa method & added up & then 'announced'
+- Added string statement in 'announcement' method to interpolate each local instances
+of 'name' & 'grades' that will be passed & mapped by the gpa converter method
+```
+
+Result passes 'Andy' but rest return an error : 'nil can't be coerced into Float' \
+Need to add rest of grades to score hash pairs to convert them.
+
+---------- Andy ---------- \
+✅ GPA: 4.0 \
+✅ ANNOUNCEMENT: Andy scored an average of 4.0
+
+-------------
 
 ## Instructions...
 

@@ -7,11 +7,19 @@ class Calculator
   end
 
   def gpa
-    4
+    gpa_converter.sum
   end
 
   def announcement
-    "Andy scored an average of 4.0"
+    "#{name} scored an average of #{gpa}"
+  end
+
+  def gpa_converter
+    grade_scores = {
+      "A" => 4.0
+    }
+  grades.collect { |grade| 
+    grade_scores[grade] }
   end
 end
 
