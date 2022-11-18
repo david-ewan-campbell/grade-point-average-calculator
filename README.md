@@ -17,10 +17,12 @@ Why are tests failing?
 ```
 
 ``` 
-STEP THREE - I changed code initially in 'gpa' & 'announcement' methods to get
-at least two expected test results turning 'green' and see where code needs to be altered.
-Hard coding '4' and "Andy scored an average of 4.0" expectation from test array/out: hash
-returns 2 green ticks in first test expectations for 'Andy'. 
+STEP THREE - Changed code initially in 'gpa' & 'announcement' methods
+- Get at least two expected test results turning 'green'
+- Get visibility on where/what code needs to be added.
+- Hard coded '4' and "Andy scored an average of 4.0" expectation 
+from test array/out: 
+- hash returns 2 green ticks in first test expectations for 'Andy'... 
 ```
 
 ---------- Andy ---------- \
@@ -34,19 +36,51 @@ returns 2 green ticks in first test expectations for 'Andy'.
 ❌ ANNOUNCEMENT: expected 'Beryl scored an average of 3.0' but got 'Andy scored an average of 4.0'
 
 ```
-STEP FOUR - Added a gpa_converter method & created a 1st hash pair from the given gpa scores list
+STEP FOUR - Added a gpa_converter method
+- Created a 1st hash pair from the given gpa scores list
 of the 1st test expectation of the Andy's top score of 'A' => 4
-added a method to iterate through grades and convert them to the equivalent score(a float) so they can be passed to the gpa method & added up & then 'announced'
-- Added string statement in 'announcement' method to interpolate each local instances
+- Added a method to iterate through grades and convert them to the equivalent score(a float) 
+so they can be passed to the gpa method & added up & then 'announced'
+- Added string statement in 'announcement' method to interpolate each 'local' instances
 of 'name' & 'grades' that will be passed & mapped by the gpa converter method
 ```
 
-Result passes 'Andy' but rest return an error : 'nil can't be coerced into Float' \
-Need to add rest of grades to score hash pairs to convert them.
+Result passes 'Andy' but rest return an error : 'nil can't be coerced into Float'
+- Need to add rest of grades to score hash pairs to convert them.
 
 ---------- Andy ---------- \
 ✅ GPA: 4.0 \
 ✅ ANNOUNCEMENT: Andy scored an average of 4.0
+
+
+``` 
+STEP FIVE - Added rest of gpa method hash pairs & a method to gpa 
+in gpa_converter hash iteration to 'sum' the total
+- The result has to be divided by the number of grades(exams taken)
+to get the mean average of each gpa - example of some of the results...
+```
+
+---------- Chris ---------- \
+✅ GPA: 2.5 \
+✅ ANNOUNCEMENT: Chris scored an average of 2.5 
+
+---------- Dan ---------- \
+❌ GPA: expected '3.5' but got '3.466666666666667' \
+❌ ANNOUNCEMENT: expected 'Dan scored an average of 3.5' but got 'Dan scored an average of 3.466666666666667'
+
+```
+- An even number of 'length' of results returned a correct response
+but 3 results returning recurring decimal places.
+- Wrapped 'gpa_converter.sum/grades.length' in brackets to return that value first
+- Then added a 'round' up method (to 1 decimal place 
+to return just the result to one decimal place)
+
+- ALL TESTS GREEN AND PASSING!
+```
+
+- Move on to extra tests/edge-cases \
+'# how_might_you_do_these ='
+
 
 -------------
 
