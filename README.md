@@ -8,8 +8,10 @@
 ## Grade Point Average (GPA) 'Converter'
 
 ``` 
-STEP ONE - Read through Instructions 
+STEP ONE - Read through Instructions
 ```
+[ORIGINAL INSTRUCTIONS](#original-instructions)
+
 ------
 ``` 
 STEP TWO - See failing output by running...
@@ -115,17 +117,25 @@ and a very helpful exercise in working with a different code base
 and work on confidence in changing and adapting it work.
 ```
 ## Some resources on methods used (add more...)
-
+CALCULATING GPA \
 https://studycrumb.com/how-to-calculate-gpa
 
+COLLECT/MAP METHOD IN RUBY \
+https://www.rubyinrails.com/2014/01/25/ruby-difference-between-collect-and-map/
+
+FINDING THE MEAN AVERAGE FROM AN ARRAY IN RUBY \
+https://andycroll.com/ruby/calculate-a-mean-average-from-a-ruby-array/
+
+ROUNDING FLOAT TO NEAREST DECIMAL PLACE / .round method \
 https://www.educative.io/answers/how-to-round-float-value-to-the-nearest-n-decimal-places-in-ruby
 
+RESCUE EXCEPTIONS IN RUBY \
 https://blog.appsignal.com/2018/04/10/rescuing-exceptions-in-ruby.html
 
 -------------
 -------------
 
-## Original Instructions...
+# Original Instructions...
 
 
 Hi there,
