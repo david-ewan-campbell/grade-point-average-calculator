@@ -81,7 +81,11 @@ but 3 results returning recurring decimal places.
 - Then added a 'round' up method (to 1 decimal place 
 to return just the result to one decimal place)
 
-- ALL TESTS GREEN AND PASSING!
+- SOME TESTS FAILING!
+- Updated Frida to have a gpa of 0.2
+- Some of the tests hash names had to be altered as they said 'Beryl' and not correct name
+
+- ALL TESTS PASSING!
 ```
 
 ```
@@ -90,7 +94,7 @@ and make the gpa_converter method 'private'
 as only being used privately by the gpa method
 ```
 
-### Move on to extra tests/edge-cases \
+### Move on to extra tests/edge-cases
 ### -'# how_might_you_do_these ='
 
 ```
