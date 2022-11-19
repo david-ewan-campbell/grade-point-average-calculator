@@ -50,8 +50,13 @@ tests = [
   { in: { name: 'Emma',  grades: ["A", "B+", "F"] }, out: { gpa: 2.4, announcement: "Emma scored an average of 2.4"  } },
   { in: { name: 'Frida',  grades: ["E", "E-"] }, out: { gpa: 0.2, announcement: "Frida scored an average of 0.2"  } },
   { in: { name: 'Gary',  grades: ["U", "U", "B+"] }, out: { gpa: 0.4, announcement: "Gary scored an average of 0.4"  } },
+
 # how_might_you_do_these =
-  { in: { name: 'Non-grades',  grades: ["N"] }, out: { gpa: nil, announcement: "Your input returned an error!!"} }
+  { in: { name: 'Non-grades',  grades: ["N"] }, out: { gpa: nil, announcement: "Your input returned an error!!"} },
+  { in: { name: 'Non-strings',  grades: ["A", :B] }, out: { gpa: nil, announcement: "Your input returned an error!!"} },
+  { in: { name: 'Empty',  grades: [] }, out: { gpa: nil, announcement: "Your input returned an error!!"} },
+  { in: { name: 'Numbers',  grades: [1, 2] }, out: { gpa: nil, announcement: "Your input returned an error!!"} },
+  { in: { name: 'Passed a string',  grades: "A A-" }, out: { gpa: nil, announcement: "Your input returned an error!!"} }
 ]
 
 # how_might_you_do_these = [
@@ -61,8 +66,6 @@ tests = [
 #   { in: { name: 'Numbers',  grades: [1, 2] } },
 #   { in: { name: 'Passed a string',  grades: "A A-" } },
 #   ]
-
-# tests += how_might_you_do_these
 
 tests.each do |test|
   user = Calculator.new(test[:in][:name], test[:in][:grades])

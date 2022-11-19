@@ -1,10 +1,16 @@
 # CoverageBook Tech Test Exercise
 
+## To run tests and see hopefully green passing test results
+```
+`ruby gpa-test.rb`
+```
+
 ## Grade Point Average (GPA) 'Converter'
 
 ``` 
 STEP ONE - Read through Instructions 
 ```
+------
 ``` 
 STEP TWO - See failing output by running...
 
@@ -15,6 +21,7 @@ Why are tests failing?
 - No methods to iterate through and calculate required gpa
 - Need to create a method to calculate a gpa from given test results
 ```
+-------
 
 ``` 
 STEP THREE - Changed code initially in 'gpa' & 'announcement' methods
@@ -45,13 +52,10 @@ so they can be passed to the gpa method & added up & then 'announced'
 of 'name' & 'grades' that will be passed & mapped by the gpa converter method
 ```
 
-Result passes 'Andy' but rest return an error : 'nil can't be coerced into Float'
-- Need to add rest of grades to score hash pairs to convert them.
+### Result passes 'Andy' but rest return an error : 'nil can't be coerced into Float'
+### Need to add rest of grades to score hash pairs to convert them.
 
----------- Andy ---------- \
-✅ GPA: 4.0 \
-✅ ANNOUNCEMENT: Andy scored an average of 4.0
-
+-------
 
 ``` 
 STEP FIVE - Added rest of gpa method hash pairs & a method to gpa 
@@ -78,15 +82,15 @@ to return just the result to one decimal place)
 - ALL TESTS GREEN AND PASSING!
 ```
 
-- Move on to extra tests/edge-cases \
-- '# how_might_you_do_these ='
+### Move on to extra tests/edge-cases \
+### -'# how_might_you_do_these ='
 
 ```
 STEP SIX - Edge/extra test Cases:
 - Moved one extra test/edge case into tests array to see what output error it returned.
 - No data outgoing in the 'out:' hash for edge cases 
 and no functions/methods to handle or return any response in gpa & announcement methods
-- Added expectation to 1st outgoing hash for 'Non-grades' of nil and an error warning
+- Added expectation to 1st outgoing hash for 'Non-grades' of 'nil' and an error warning
 - After some research into how to pass 'exceptions' and alert for errors inputted
 added a 'rescue' method to look for a nil input and pass to announcement method
 to return an error message with an if else statement.
@@ -94,12 +98,34 @@ to return an error message with an if else statement.
 - All the gpa returns suddenly returned red
 - Realised I hadn't instantiated a local @gpa = gpa instance
 to make it available to use in the announcement method.
-- Works!! First extra edge case passes.
+- Works!! First extra edge case passes...
 ```
 
+```
+#STEP SEVEN - Rest of edge-cases altered to give same output of nil and an error message.
+BUT!!
+- Is this just a quick fix? Should I have added the nil/error message output in the hash?
+- Simplest fix to give something to calculator class/methods to get a response
+and change methods to respond accordingly. 
+- But there is probably a more elegant (and 'correct' solution for these extra test cases?)
+but also would be much more complex I suspect!
+- The best solution I felt I could find in the time available.
+- Continue to work on this out of interest another time
+and a very helpful exercise in working with a different code base
+and work on confidence in changing and adapting it work.
+```
+## Some resources on methods used (add more...)
+
+https://studycrumb.com/how-to-calculate-gpa
+
+https://www.educative.io/answers/how-to-round-float-value-to-the-nearest-n-decimal-places-in-ruby
+
+https://blog.appsignal.com/2018/04/10/rescuing-exceptions-in-ruby.html
+
+-------------
 -------------
 
-## Instructions...
+## Original Instructions...
 
 
 Hi there,
@@ -156,6 +182,6 @@ Aim to spend 30-60 minutes on the exercise. You might finish, you might not. But
 
 Feel free to use private methods, leave comments and use git as you wish.
 
-Submit the code to andy@coveragebook.com as a single file named `gpa-test-yourgithubusername.rb`.
+Submit the code to ------------ as a single file named `gpa-test-yourgithubusername.rb`.
 
 Andy
