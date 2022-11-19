@@ -1,17 +1,26 @@
 class Calculator
-  attr_reader :name, :grades
+  attr_reader :name, :grades, :gpa
 
   def initialize(name, grades)
     @name = name
     @grades = grades
+    @gpa = gpa
   end
 
   def gpa
-    (gpa_converter.sum/grades.length).round(1)
+    begin
+      (gpa_converter.sum/grades.length).round(1)
+    rescue
+      return nil
+    end
   end
 
   def announcement
-    "#{name} scored an average of #{gpa}"
+    if gpa == nil
+      return "Your input returned an error!!" 
+    else
+      "#{name} scored an average of #{@gpa}"
+    end
   end
 
   private
@@ -40,16 +49,20 @@ tests = [
   { in: { name: 'Dan',  grades: ["A", "A-", "B-"] }, out: { gpa: 3.5, announcement: "Dan scored an average of 3.5"  } },
   { in: { name: 'Emma',  grades: ["A", "B+", "F"] }, out: { gpa: 2.4, announcement: "Emma scored an average of 2.4"  } },
   { in: { name: 'Frida',  grades: ["E", "E-"] }, out: { gpa: 0.2, announcement: "Frida scored an average of 0.2"  } },
-  { in: { name: 'Gary',  grades: ["U", "U", "B+"] }, out: { gpa: 0.4, announcement: "Gary scored an average of 0.4"  } }
+  { in: { name: 'Gary',  grades: ["U", "U", "B+"] }, out: { gpa: 0.4, announcement: "Gary scored an average of 0.4"  } },
+# how_might_you_do_these =
+  { in: { name: 'Non-grades',  grades: ["N"] }, out: { gpa: nil, announcement: "Your input returned an error!!"} }
 ]
 
 # how_might_you_do_these = [
-#   { in: { name: 'Non-grades',  grades: ["N"] } }
+#   { in: { name: 'Non-grades',  grades: ["N"] },
 #   { in: { name: 'Non-strings',  grades: ["A", :B] } },
 #   { in: { name: 'Empty',  grades: [] } },
 #   { in: { name: 'Numbers',  grades: [1, 2] } },
 #   { in: { name: 'Passed a string',  grades: "A A-" } },
-# ]
+#   ]
+
+# tests += how_might_you_do_these
 
 tests.each do |test|
   user = Calculator.new(test[:in][:name], test[:in][:grades])

@@ -79,8 +79,23 @@ to return just the result to one decimal place)
 ```
 
 - Move on to extra tests/edge-cases \
-'# how_might_you_do_these ='
+- '# how_might_you_do_these ='
 
+```
+STEP SIX - Edge/extra test Cases:
+- Moved one extra test/edge case into tests array to see what output error it returned.
+- No data outgoing in the 'out:' hash for edge cases 
+and no functions/methods to handle or return any response in gpa & announcement methods
+- Added expectation to 1st outgoing hash for 'Non-grades' of nil and an error warning
+- After some research into how to pass 'exceptions' and alert for errors inputted
+added a 'rescue' method to look for a nil input and pass to announcement method
+to return an error message with an if else statement.
+
+- All the gpa returns suddenly returned red
+- Realised I hadn't instantiated a local @gpa = gpa instance
+to make it available to use in the announcement method.
+- Works!! First extra edge case passes.
+```
 
 -------------
 
