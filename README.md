@@ -84,6 +84,12 @@ to return just the result to one decimal place)
 - ALL TESTS GREEN AND PASSING!
 ```
 
+```
+- ALSO REMEMBERED TO USE ENCAPSULATION
+and make the gpa_converter method 'private'
+as only being used privately by the gpa method
+```
+
 ### Move on to extra tests/edge-cases \
 ### -'# how_might_you_do_these ='
 
@@ -131,6 +137,9 @@ https://www.educative.io/answers/how-to-round-float-value-to-the-nearest-n-decim
 
 RESCUE EXCEPTIONS IN RUBY \
 https://blog.appsignal.com/2018/04/10/rescuing-exceptions-in-ruby.html
+
+PRIVATE METHOD/ENCAPSULATION
+https://www.rubyguides.com/2018/10/method-visibility/
 
 -------------
 -------------
